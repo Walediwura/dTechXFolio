@@ -16,7 +16,7 @@ export default function Home() {
   }, []);
   return (
     <div
-      className={`px-8 xl:px-12 w-full min-h-screen flex flex-col items-center dark:bg-background-dark bg-background transition-all duration-300`}
+      className={`px-8 xl:px-16 w-full min-h-screen flex flex-col items-center dark:bg-background-dark bg-background transition-all duration-300`}
     >
       <Nav />
       <ProfileOverview />

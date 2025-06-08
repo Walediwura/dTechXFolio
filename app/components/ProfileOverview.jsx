@@ -208,7 +208,7 @@ const ProfileOverview = () => {
                   className="bg-white bottom-[89px] left-[67%] w-[17.334px] h-[17.334px] rounded-full absolute"
                 />
                 <Image
-                  className="rounded-full w-15 h-15 border-2 border-white"
+                  className="rounded-full border-2 border-white"
                   src={Avatar}
                   alt="avatar"
                 />
@@ -222,7 +222,7 @@ const ProfileOverview = () => {
                 transition={{ duration: 0.3, ease: "easeOut" }}
               >
                 <Image
-                  className="rounded-full border-2 w-15 h-15 border-white transform scale-x-[-1] transition duration-300 ease-out"
+                  className="rounded-full border-2 border-white transform scale-x-[-1] transition duration-300 ease-out"
                   src={Avatar}
                   alt="avatar"
                 />
