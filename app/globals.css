@@ -1,0 +1,46 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@custom-variant dark (&:is(.dark *));
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --background: #eee;
+  --background-dark: #121212;
+  --darko: #282828;
+  --nice-gray: #949495;
+  --whitish-gray: #e8e8e8;
+  --whitey: #f6f7f7;
+  --alt-gray: #bcbcbc;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-darko: var(--darko);
+  --color-nice-gray: var(--nice-gray);
+  --color-whitish-gray: var(--whitish-gray);
+  --color-whitey: var(--whitey);
+  --color-background-dark: var(--background-dark);
+  --color-alt-gray: var(--alt-gray);
+  --font-urban: var(--font-urbanist);
+}
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
