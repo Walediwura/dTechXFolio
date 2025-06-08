@@ -49,7 +49,7 @@ const ProfileOverview = () => {
         transition={{ duration: 2 }}
         className="flex flex-col lg:sticky lg:top-0 h-screen text-darko pt-[126px] pb-10 justify-between gap-4 lg:w-[50%]"
       >
-        <div className="flex flex-col text-darko dark:text-whitey duration-300 transition ease-out">
+        <div className="flex flex-col text-darko dark:text-whitey duration-300 transition ease-out gap-2">
           <h1 className="text-6xl font-bold uppercase">
             {" "}
             {PROFILE?.name?.split("")?.map((character, index) => (
