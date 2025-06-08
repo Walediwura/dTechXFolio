@@ -166,7 +166,7 @@ const ProfileOverview = () => {
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.3 }}
-          className="flex items-center gap-11 mt-12 md:mt-0 relative"
+          className="flex items-center gap-11 pt-12 md:pt-0 relative"
         >
           <AnimatePresence mode="wait">
             {visible ? (
