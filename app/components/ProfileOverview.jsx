@@ -92,7 +92,7 @@ const ProfileOverview = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="flex flex-col gap-6 text-sm"
+          className="flex flex-col gap-6 text-sm py-6 sm:py-0"
         >
           {sections.map(({ id, label, href }) => {
             const isActive = section === id;
