@@ -4,7 +4,7 @@ import BriefCase from "@/public/briefcase.svg";
 const ExperienceCard = ({ companyName, roles, duration, jobType }) => {
   return (
     <div className="flex items-center gap-6">
-      <div className="w-25 h-25 flex justify-center items-center bg-whitish-gray dark:bg-[#252525] transition duration-300 rounded-full">
+      <div className="sm:w-25 sm:h-25 flex justify-center items-center bg-whitish-gray dark:bg-[#252525] transition duration-300 rounded-full">
         <Image
           src={BriefCase}
           alt="Briefcase"
