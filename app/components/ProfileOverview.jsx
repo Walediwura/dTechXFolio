@@ -71,7 +71,7 @@ const ProfileOverview = () => {
         </div>
 
         {/* Bio */}
-        <div className="text-nice-gray dark:text-alt-gray font-urban leading-6 tracking-[0.18px] w-[96%]">
+        <div className="text-nice-gray dark:text-alt-gray font-urban leading-6 tracking-[0.18px] md:text-lg w-[96%]">
           A talented frontend and product designer with years of experience in
           the design industry.{" "}
           <span className="text-darko dark:text-whitey  font-bold">
