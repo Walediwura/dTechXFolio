@@ -40,7 +40,7 @@ const ProfileOverview = () => {
 
   return (
     <div
-      className="flex w-full h-full flex-col lg:flex-row lg:justify-between"
+      className="flex w-full h-full flex-col lg:flex-row lg:justify-between gap-8 sm:gap-0"
       id="projects"
     >
       <motion.section
