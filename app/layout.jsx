@@ -3,7 +3,6 @@ import { Urbanist } from "next/font/google";
 import "./globals.css";
 import FollowCursor from "./components/FollowCursor";
 import { ThemeProvider } from "next-themes";
-// import useDarkMode from "@/hooks/useDarkMode";
 
 const antonio = Antonio({
   subsets: ["latin"],
@@ -32,7 +31,7 @@ export default function RootLayout({ children }) {
               {children}
             </ThemeProvider>
 
-            {/* <FollowCursor /> */}
+            <FollowCursor />
           </div>
         </div>
       </body>

@@ -11,7 +11,7 @@ const DesignCard = ({
       target="_blank"
       rel="noopener noreferrer"
       href={link}
-      className="bg-whitish-gray dark:bg-[#252525] cursor-pointer flex flex-col gap-8 w-full mb-4 sm:w-[49%] px-6 py-7"
+      className="bg-whitish-gray dark:bg-[#252525] cursor-pointer flex flex-col gap-8 w-full mb-4 sm:w-[49%] px-6 py-7 sm:hover:scale-[1.03] duration-500 transform hover:transform transition"
     >
       <header className="text-darko dark:text-whitey text-xl">
         {projectName}
