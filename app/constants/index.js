@@ -84,7 +84,8 @@ export const PROJECTS = [
   {
     role: "Mobile Application",
     company: "Wagerz",
-    description: `It is a mobile app that provides bettors expert reviews on legal USA online gambling sites with in-depth coverage of sports betting.`,
+    description:
+      "It is a mobile app that provides bettors expert reviews on legal USA online gambling sites with in-depth coverage of sports betting.",
   },
 
   {
