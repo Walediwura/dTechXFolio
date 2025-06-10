@@ -11,7 +11,7 @@ const ProjectCard = ({
       target="_blank"
       rel="noopener noreferrer"
       href={link}
-      className="px-6 py-7 flex flex-col gap-8 bg-whitish-gray sm:hover:scale-105  dark:bg-[#252525] w-full hover:transform duration-500 transform transition"
+      className="px-6 py-7 flex flex-col gap-8 bg-whitish-gray sm:hover:scale-105  dark:bg-[#252525] w-full hover:transform duration-300 hover:duration-500 transform transition"
     >
       <h2 className="text-xl uppercase text-darko dark:text-whitey">
         {companyName}

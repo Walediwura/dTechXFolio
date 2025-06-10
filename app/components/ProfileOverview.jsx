@@ -167,111 +167,128 @@ const ProfileOverview = () => {
             );
           })}
         </motion.div>
-
-        <motion.footer
-          initial={{ opacity: 0, x: 20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.3 }}
-          className="flex items-center gap-11 pt-16 md:pt-0 relative"
-        >
-          <AnimatePresence mode="wait">
-            {visible ? (
-              <motion.span
-                key="visible"
-                className="relative"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.3, ease: "easeOut" }}
-              >
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                  transition={{ duration: 0.3, ease: "easeOut" }}
-                  className="bg-white bottom-[73px] left-1/2 w-[8.667px] h-[8.667px] rounded-full absolute"
-                />
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                  transition={{ duration: 0.3, ease: "easeOut" }}
-                  className="bg-white backdrop-blur-sm bottom-[90px] left-[70%] w-[250px] h-10 rounded-full absolute"
-                >
-                  <span className="font-urban flex h-full w-full text-sm text-darko font-semibold items-center justify-center">
-                    Hello You, let’s create magic!
-                  </span>
-                </motion.div>
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                  transition={{ duration: 0.3, ease: "easeOut" }}
-                  className="bg-white bottom-[89px] left-[67%] w-[17.334px] h-[17.334px] rounded-full absolute"
-                />
-                <Image
-                  className="rounded-full border-2 border-white"
-                  src={Avatar}
-                  alt="avatar"
-                />
-              </motion.span>
-            ) : (
-              <motion.div
-                key="hidden"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.3, ease: "easeOut" }}
-              >
-                <Image
-                  className="rounded-full border-2 border-white transform scale-x-[-1] transition duration-300 ease-out"
-                  src={Avatar}
-                  alt="avatar"
-                />
-              </motion.div>
-            )}
-          </AnimatePresence>
-
-          <motion.div
+        <footer className="flex justify-between w-full pt-16">
+          <motion.section
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1 }}
-            className="flex items-center gap-4"
+            transition={{ duration: 0.3 }}
+            className="flex items-center gap-11 md:pt-0 relative"
+          >
+            <AnimatePresence mode="wait">
+              {visible ? (
+                <motion.span
+                  key="visible"
+                  className="relative"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.3, ease: "easeOut" }}
+                >
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.3, ease: "easeOut" }}
+                    className="bg-white bottom-[73px] left-1/2 w-[8.667px] h-[8.667px] rounded-full absolute"
+                  />
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.3, ease: "easeOut" }}
+                    className="bg-white backdrop-blur-sm bottom-[90px] left-[70%] w-[250px] h-10 rounded-full absolute"
+                  >
+                    <span className="font-urban flex h-full w-full text-sm text-darko font-semibold items-center justify-center">
+                      Hello You, let’s create magic!
+                    </span>
+                  </motion.div>
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.3, ease: "easeOut" }}
+                    className="bg-white bottom-[89px] left-[67%] w-[17.334px] h-[17.334px] rounded-full absolute"
+                  />
+                  <Image
+                    className="rounded-full border-2 border-white"
+                    src={Avatar}
+                    alt="avatar"
+                  />
+                </motion.span>
+              ) : (
+                <motion.div
+                  key="hidden"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.3, ease: "easeOut" }}
+                >
+                  <Image
+                    className="rounded-full border-2 border-white transform scale-x-[-1] transition duration-300 ease-out"
+                    src={Avatar}
+                    alt="avatar"
+                  />
+                </motion.div>
+              )}
+            </AnimatePresence>
+
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1 }}
+              className="flex items-center gap-4"
+            >
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.linkedin.com/in/praise-akobundu"
+                className="cursor-pointer hover:scale-[1.02] duration-300 ease-out"
+              >
+                <Image src={LinkedIn} alt="linkedIn" />
+              </a>
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.figma.com/@dtechguyx"
+                className="cursor-pointer hover:scale-[1.02] duration-300 ease-out"
+              >
+                <Image src={Figma} alt="figma" />
+              </a>
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://dribbble.com/dtechguyx"
+                className="cursor-pointer hover:scale-[1.02] duration-300 ease-out"
+              >
+                <Image src={Dribble} alt="dribbble" />
+              </a>
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.behance.net/praiseakobundu"
+                className="cursor-pointer hover:scale-[1.02] duration-300 ease-out"
+              >
+                <Image src={Behance} alt="behance" />
+              </a>{" "}
+            </motion.div>
+          </motion.section>
+
+          <motion.section
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.3 }}
+            className="w-fit flex lg:hidden items-end"
           >
             <a
+              href="https://github.com/Walediwura"
               target="_blank"
               rel="noopener noreferrer"
-              href="https://www.linkedin.com/in/praise-akobundu"
-              className="cursor-pointer hover:scale-[1.02] duration-300 ease-out"
+              className="text-xs font-medium cursor-pointer font-urban dark:text-whitey text-darko transition-all transform duration-75 ease-out"
             >
-              <Image src={LinkedIn} alt="linkedIn" />
+              Coded by Walediwura
             </a>
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://www.figma.com/@dtechguyx"
-              className="cursor-pointer hover:scale-[1.02] duration-300 ease-out"
-            >
-              <Image src={Figma} alt="figma" />
-            </a>
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://dribbble.com/dtechguyx"
-              className="cursor-pointer hover:scale-[1.02] duration-300 ease-out"
-            >
-              <Image src={Dribble} alt="dribbble" />
-            </a>
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://www.behance.net/praiseakobundu"
-              className="cursor-pointer hover:scale-[1.02] duration-300 ease-out"
-            >
-              <Image src={Behance} alt="behance" />
-            </a>{" "}
-          </motion.div>
-        </motion.footer>
+          </motion.section>
+        </footer>
       </motion.section>
 
       <motion.section

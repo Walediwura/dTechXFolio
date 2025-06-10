@@ -4,7 +4,7 @@ import Dribble from "@/public/dribbble.svg";
 export const PROFILE = {
   name: "PRAISE AKOBUNDU",
   nickName: "dTechGuyX",
-  roles: ["Product design", "Frontend Developer"],
+  roles: ["Product Designer", "Frontend Developer"],
   city: "Lagos, Nigeria 🇳🇬",
   greet: "Nice to Meet you!",
 };
