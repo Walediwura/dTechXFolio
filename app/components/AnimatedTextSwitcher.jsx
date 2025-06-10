@@ -15,8 +15,8 @@ export default function AnimatedTextSwitcher({ onStep }) {
   useEffect(() => {
     const timer = setTimeout(() => {
       onStep?.(index);
-      setIndex((prev) => (prev + 1) % texts.length);
-    }, 1500);
+      setIndex((prev) => (prev + 1) % texts.length); // loop back to 0
+    }, 2500);
     return () => clearTimeout(timer);
   }, [index, onStep]);
 
