@@ -9,12 +9,13 @@ const texts = [
   "Problem Solver",
 ];
 
-export default function AnimatedTextSwitcher() {
+export default function AnimatedTextSwitcher({ onStep }) {
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setIndex((prev) => (prev + 1) % texts.length);
+      onStep?.(index);
+      setIndex((prev) => (prev + 1) % texts.length); // loop back to 0
     }, 2500);
     return () => clearTimeout(timer);
   }, [index, onStep]);
