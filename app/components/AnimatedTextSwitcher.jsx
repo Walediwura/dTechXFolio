@@ -9,16 +9,15 @@ const texts = [
   "Problem Solver",
 ];
 
-export default function AnimatedTextSwitcher({ onStep }) {
+export default function AnimatedTextSwitcher() {
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      onStep?.(index);
-      setIndex((prev) => (prev + 1) % texts.length); // loop back to 0
-    }, 2500);
+      setIndex((prev) => (prev + 1) % texts.length);
+    }, 1700);
     return () => clearTimeout(timer);
-  }, [index, onStep]);
+  }, [index]);
 
   return (
     <div className="relative h-8 overflow-hidden">

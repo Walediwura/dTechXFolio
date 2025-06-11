@@ -25,7 +25,7 @@ export default function Home() {
     const animate = () => {
       setDisplayCount((prev) => {
         const diff = target - prev;
-        const step = diff * 0.1;
+        const step = diff * 0.06;
         if (Math.abs(diff) < 0.1) return target;
         return prev + step;
       });
@@ -37,17 +37,22 @@ export default function Home() {
   }, [target]);
 
   useEffect(() => {
+    if (!loading) return;
+
+    let i = 0;
     const interval = setInterval(() => {
-      setTarget((prev) => (prev >= 100 ? 0 : prev + 1));
-    }, 100);
+      setTarget(i);
+      i++;
+      if (i > 100) clearInterval(interval);
+    }, 60);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [loading]);
 
   useEffect(() => {
     const timeout = setTimeout(() => {
       setLoading(false);
-    }, 10200);
+    }, 7200);
 
     return () => clearTimeout(timeout);
   }, []);
@@ -58,22 +63,22 @@ export default function Home() {
         loading ? "h-screen overflow-hidden" : ""
       }`}
     >
-      <AnimatePresence>
+      <AnimatePresence mode="wait">
         {loading && (
           <motion.div
             key="loader"
             initial={{ opacity: 1 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 1.2, ease: [0.25, 1, 0.5, 1] }}
             className="absolute inset-0 z-50 w-full flex items-center p-[2.5%] dark:bg-background-dark bg-background text-darko dark:text-whitey"
           >
             <div className="flex flex-col gap-4">
               <motion.div
-                initial={{ opacity: 0, scale: 0.96 }}
+                initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.98 }}
-                transition={{ duration: 0.5 }}
+                exit={{ opacity: 0, scale: 1.02 }}
+                transition={{ duration: 0.6 }}
                 className="text-[100px] font-semibold tracking-tight"
               >
                 dTechGuyX
@@ -91,22 +96,26 @@ export default function Home() {
         )}
       </AnimatePresence>
 
-      {!loading && (
-        <motion.div
-          key="page"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{
-            duration: 1,
-            ease: [0.25, 1, 0.5, 1],
-            delay: 0.1,
-          }}
-          className="px-8 xl:px-16 w-full flex flex-col items-center dark:bg-background-dark bg-background transition-all duration-300"
-        >
-          <Nav />
-          <ProfileOverview />
-        </motion.div>
-      )}
+      <motion.div
+        key="page"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: loading ? 0 : 1 }}
+        transition={{
+          duration: 1.2,
+          ease: [0.25, 1, 0.5, 1],
+          delay: loading ? 0.3 : 0, // tiny delay for loader fade
+        }}
+        className={`px-8 xl:px-16 w-full flex flex-col items-center dark:bg-background-dark bg-background transition-all duration-300 ${
+          loading ? "pointer-events-none" : ""
+        }`}
+      >
+        {!loading && (
+          <>
+            <Nav />
+            <ProfileOverview />
+          </>
+        )}
+      </motion.div>
     </div>
   );
 }
