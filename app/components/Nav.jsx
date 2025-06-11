@@ -30,16 +30,21 @@ const Nav = () => {
         <Logo themeColor={theme} />
       </div>
 
-      <h2 className="text-2xl text-darko dark:text-whitey  sm:hidden">
+      <a
+        href="mailto:akobundupraise66@gmail.com?subject=Let's%20Create%20Magic&body=Good%20day%20d-TechGuyX,%0A%0AI%20would%20like%20us%20to%20create%20magic.%0A%0AThanks"
+        className="relative cursor-pointer group text-2xl inline-block sm:hidden"
+      >
         Reach Out
-      </h2>
+        <span className="absolute left-0 bottom-[-2px] h-[2px] w-0 dark:bg-whitey bg-darko transition-all duration-300 group-hover:w-full"></span>
+      </a>
 
       <div className="text-darko dark:text-whitey uppercase flex items-center gap-10 relative">
         <a
-          href="mailto:akobundupraise66@gmail.com?subject=Let%27s%20Create%20Magic&body=Good%20day%20d-TechGuyX%2C%0A%0AI%20would%20like%20us%20to%20create%20magic.%0A%0AThanks"
-          className="text-2xl hidden sm:inline"
+          href="mailto:akobundupraise66@gmail.com?subject=Let's%20Create%20Magic&body=Good%20day%20d-TechGuyX,%0A%0AI%20would%20like%20us%20to%20create%20magic.%0A%0AThanks"
+          className="relative cursor-pointer group text-2xl hidden sm:inline-block"
         >
           Reach Out
+          <span className="absolute left-0 bottom-[-2px] h-[2px] w-0 dark:bg-whitey bg-darko transition-all duration-300 group-hover:w-full"></span>
         </a>
 
         <button

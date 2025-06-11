@@ -44,7 +44,7 @@ export default function Home() {
       setTarget(i);
       i++;
       if (i > 100) clearInterval(interval);
-    }, 60);
+    }, 40);
 
     return () => clearInterval(interval);
   }, [loading]);
@@ -52,7 +52,7 @@ export default function Home() {
   useEffect(() => {
     const timeout = setTimeout(() => {
       setLoading(false);
-    }, 7200);
+    }, 5280);
 
     return () => clearTimeout(timeout);
   }, []);

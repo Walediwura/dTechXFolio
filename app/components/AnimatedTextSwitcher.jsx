@@ -5,8 +5,8 @@ import { AnimatePresence, motion } from "framer-motion";
 const texts = [
   "your go to Designer",
   "UI/UX Expert",
-  "Creative Coder",
   "Problem Solver",
+  "Creative Coder",
 ];
 
 export default function AnimatedTextSwitcher() {
@@ -15,7 +15,7 @@ export default function AnimatedTextSwitcher() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIndex((prev) => (prev + 1) % texts.length);
-    }, 1700);
+    }, 1500);
     return () => clearTimeout(timer);
   }, [index]);
 
