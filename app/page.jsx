@@ -60,7 +60,7 @@ export default function Home() {
   return (
     <div
       className={`relative w-full bg-white ${
-        loading ? "h-screen overflow-hidden" : ""
+        loading ? "min-h-[100dvh] overflow-hidden" : ""
       }`}
     >
       <AnimatePresence mode="wait">
@@ -79,7 +79,7 @@ export default function Home() {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 1.02 }}
                 transition={{ duration: 0.6 }}
-                className="text-[100px] font-semibold tracking-tight"
+                className="text-7xl md:text-[100px] font-semibold tracking-tight"
               >
                 dTechGuyX
               </motion.div>
