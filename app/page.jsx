@@ -71,7 +71,7 @@ export default function Home() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 1.2, ease: [0.25, 1, 0.5, 1] }}
-            className="absolute inset-0 z-50 w-full flex items-center p-[2.5%] dark:bg-background-dark bg-background text-darko dark:text-whitey"
+            className="absolute inset-0 z-[9999] w-full flex items-center p-[2.5%] dark:bg-background-dark bg-background text-darko dark:text-whitey"
           >
             <div className="flex flex-col gap-4">
               <motion.div
