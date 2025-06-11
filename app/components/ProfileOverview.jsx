@@ -283,7 +283,7 @@ const ProfileOverview = () => {
               href="https://github.com/Walediwura"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-xs font-semibold cursor-pointer font-urban dark:text-whitey text-darko transition-all transform duration-75 ease-out"
+              className="hidden sm:inline text-xs font-semibold cursor-pointer font-urban dark:text-whitey text-darko transition-all transform duration-75 ease-out"
             >
               Coded by Walediwura
             </a>

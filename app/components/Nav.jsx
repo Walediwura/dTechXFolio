@@ -30,11 +30,17 @@ const Nav = () => {
         <Logo themeColor={theme} />
       </div>
 
-        <h2 className="text-2xl text-darko dark:text-whitey  sm:hidden">Reach Out</h2>
-
+      <h2 className="text-2xl text-darko dark:text-whitey  sm:hidden">
+        Reach Out
+      </h2>
 
       <div className="text-darko dark:text-whitey uppercase flex items-center gap-10 relative">
-        <h2 className="text-2xl hidden sm:inline">Reach Out</h2>
+        <a
+          href="mailto:akobundupraise66@gmail.com?subject=Let%27s%20Create%20Magic&body=Good%20day%20d-TechGuyX%2C%0A%0AI%20would%20like%20us%20to%20create%20magic.%0A%0AThanks"
+          className="text-2xl hidden sm:inline"
+        >
+          Reach Out
+        </a>
 
         <button
           onClick={() => setTheme(theme === "light" ? "dark" : "light")}

@@ -89,6 +89,19 @@ export default function Home() {
               </span>
             </div>
 
+            <div className="absolute bottom-4 left-0  font-bold p-[2.5%]">
+              Coded by{" "}
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.github.com/Walediwura"
+                className="relative inline-block cursor-pointer group"
+              >
+                Walediwura&trade;
+                <span className="absolute left-0 bottom-0 h-[2px] w-0 dark:bg-whitey bg-darko transition-all duration-300 group-hover:w-full"></span>
+              </a>
+            </div>
+
             <div className="absolute bottom-4 right-6 font-bold lg:text-[100px] lg:px-[5%] py-[2.5%]">
               {Math.round(displayCount)}
             </div>
@@ -103,7 +116,7 @@ export default function Home() {
         transition={{
           duration: 1.2,
           ease: [0.25, 1, 0.5, 1],
-          delay: loading ? 0.3 : 0, // tiny delay for loader fade
+          delay: loading ? 0.3 : 0,
         }}
         className={`px-8 xl:px-16 w-full flex flex-col items-center dark:bg-background-dark bg-background transition-all duration-300 ${
           loading ? "pointer-events-none" : ""
