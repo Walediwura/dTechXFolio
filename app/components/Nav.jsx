@@ -32,7 +32,7 @@ const Nav = () => {
 
       <a
         href="mailto:akobundupraise66@gmail.com?subject=Let's%20Create%20Magic&body=Good%20day%20d-TechGuyX,%0A%0AI%20would%20like%20us%20to%20create%20magic.%0A%0AThanks"
-        className="relative cursor-pointer group text-2xl inline-block sm:hidden"
+        className="relative text-darko dark:text-whitey cursor-pointer group text-2xl inline-block sm:hidden"
       >
         Reach Out
         <span className="absolute left-0 bottom-[-2px] h-[2px] w-0 dark:bg-whitey bg-darko transition-all duration-300 group-hover:w-full"></span>
