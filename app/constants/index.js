@@ -136,3 +136,31 @@ export const EXPERIENCES = [
     url: "https://github.com",
   },
 ];
+
+export const APPROACHES = [
+  {
+    id: 1,
+    method: "Discovery",
+    explication:
+      "When we start a new contract, I want to learn all about your project and know what the goal is. We'll work together to find a solution and figure out what we need to do to reach it.",
+  },
+  {
+    id: 2,
+    method: "Wireframe",
+    explication:
+      "Once we know the goal, I'll start creating a wireframe to organize the information we talked about and tackle any UX issues that might arise.",
+  },
+  {
+    id: 3,
+    method: "Mood Board",
+    explication:
+      "Since we each have our own preferences, I'll create mood boards to help us pick the best design direction for your project.",
+  },
+
+  {
+    id: 4,
+    method: "Design",
+    explication:
+      "Now that we've finished the earlier steps, it's time to work on the UI. I'll use the approved wireframe and mood board to create an awesome design.",
+  },
+];

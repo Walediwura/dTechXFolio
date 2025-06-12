@@ -1,5 +1,12 @@
 "use client";
-import { DESIGNS, EXPERIENCES, PROFILE, PROJECTS } from "../constants";
+import {
+  APPROACH,
+  APPROACHES,
+  DESIGNS,
+  EXPERIENCES,
+  PROFILE,
+  PROJECTS,
+} from "../constants";
 import { AnimatePresence, motion } from "framer-motion";
 import Avatar from "@/public/praise-avatar.svg";
 import LinkedIn from "@/public/linkedin (2).svg";
@@ -13,11 +20,13 @@ import ProjectCard from "./ProjectCard";
 import DesignCard from "./DesignCard";
 import ExperienceCard from "./ExperienceCard";
 import { useTheme } from "next-themes";
+import ApproachCard from "./ApproachCard";
 
 const sections = [
   { id: 1, label: "Projects", href: "#projects" },
   { id: 2, label: "Designs", href: "#design" },
   { id: 3, label: "Experience", href: "#experience" },
+  { id: 4, label: "Approach", href: "#approach" },
 ];
 
 const ProfileOverview = () => {
@@ -361,7 +370,7 @@ const ProfileOverview = () => {
         </div>
         <div
           onMouseEnter={() => handleUpdateSection(3)}
-          className="flex flex-col w-full sm:w-[95%] text-darko dark:text-whitey"
+          className="flex flex-col w-full sm:w-[95%] text-darko dark:text-whitey mb-30"
         >
           <header className="flex mb-7 flex-col text-darko dark:text-whitey">
             <motion.span
@@ -383,6 +392,37 @@ const ProfileOverview = () => {
                   roles={experience?.role}
                   jobType={experience?.jobType}
                   duration={experience?.duration}
+                />
+              ))}
+            </section>
+          </main>
+
+          <div id="approach" className="mb-2.5"></div>
+        </div>
+
+        <div
+          onMouseEnter={() => handleUpdateSection(4)}
+          className="flex flex-col w-full sm:w-[95%] text-darko dark:text-whitey"
+        >
+          <header className="flex mb-7 flex-col text-darko dark:text-whitey">
+            <motion.span
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1 }}
+              className="uppercase font-bold"
+            >
+              Approach
+            </motion.span>
+          </header>
+
+          <main>
+            <section className="w-full flex flex-col gap-6 justify-between">
+              {APPROACHES?.map((approach) => (
+                <ApproachCard
+                  key={approach?.id}
+                  id={approach?.id}
+                  method={approach?.method}
+                  explication={approach?.explication}
                 />
               ))}
             </section>

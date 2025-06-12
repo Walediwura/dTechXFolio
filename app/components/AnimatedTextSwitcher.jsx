@@ -6,7 +6,7 @@ const texts = [
   "your go to Designer",
   "UI/UX Expert",
   "Problem Solver",
-  "Creative Coder",
+  "Creative Genius",
 ];
 
 export default function AnimatedTextSwitcher() {
