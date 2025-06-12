@@ -102,7 +102,7 @@ export default function Home() {
               </a>
             </div>
 
-            <div className="absolute bottom-4 right-6 font-bold lg:text-[100px] lg:px-[5%] py-[2.5%]">
+            <div className="absolute bottom-4 right-0 font-bold lg:text-[100px] px-[2.5%]">
               {Math.round(displayCount)}
             </div>
           </motion.div>

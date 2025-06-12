@@ -29,24 +29,6 @@ const Logo = ({ themeColor }) => {
         className="cursor-pointer transition-all duration-300 ease-in-out"
       >
         <Image src={isDarkMode ? logoWhite : logo} alt="logo" />
-
-        <motion.span
-          initial={{ opacity: 0, x: 10 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1.3, delay: 0.6 }}
-          className={`text-sm ${isDarkMode ? "text-whitey" : "text-darko"} font-thin tracking-[0.156px] transition-all duration-300 ease-in-out`}
-        >
-          {nickname.split("").map((char, index) => (
-            <motion.span
-              key={index}
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: index * 0.15 }}
-            >
-              {char}
-            </motion.span>
-          ))}
-        </motion.span>
       </motion.div>
     </Link>
   );
