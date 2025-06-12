@@ -416,7 +416,7 @@ const ProfileOverview = () => {
           </header>
 
           <main>
-            <section className="w-full flex flex-col gap-6 justify-between">
+            <section className="w-full flex flex-col gap-5 justify-between">
               {APPROACHES?.map((approach) => (
                 <ApproachCard
                   key={approach?.id}
