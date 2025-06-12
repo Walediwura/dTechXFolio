@@ -89,7 +89,7 @@ export default function Home() {
               </span>
             </div>
 
-            <div className="absolute bottom-4 left-0  font-bold p-[2.5%]">
+            <div className="absolute bottom-4 left-0  font-bold px-[2.5%] sm:p-[2.5%]">
               Coded by{" "}
               <a
                 target="_blank"
