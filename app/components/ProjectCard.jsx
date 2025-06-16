@@ -28,13 +28,7 @@ const ProjectCard = ({
         <span>
           <Dot />
         </span>
-        <span
-          className={`flex items-center ${
-            status === "LIVE" ? "animate-pulse" : ""
-          }`}
-        >
-          {status}
-        </span>
+        <span className={`flex items-center`}>{status}</span>
       </span>
     </a>
   );
