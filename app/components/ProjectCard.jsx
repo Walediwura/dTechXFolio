@@ -1,10 +1,12 @@
 import React from "react";
+import Dot from "./Dot";
 
 const ProjectCard = ({
   companyName = "TrueKeepers NGO",
   companyBio = "Loading...",
   positionHeld = "Web Application",
   link,
+  status = "LIVE",
 }) => {
   return (
     <a
@@ -21,8 +23,18 @@ const ProjectCard = ({
         {companyBio}
       </span>
 
-      <span className="text-xs tracking-[0.12px] dark:text-whitey">
-        {positionHeld}
+      <span className="text-xs font-urban tracking-[0.12px] dark:text-whitey flex items-center gap-3">
+        <span>{positionHeld}</span>{" "}
+        <span>
+          <Dot />
+        </span>
+        <span
+          className={`flex items-center ${
+            status === "LIVE" ? "animate-pulse" : ""
+          }`}
+        >
+          {status}
+        </span>
       </span>
     </a>
   );

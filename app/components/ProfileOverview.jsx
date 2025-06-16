@@ -49,7 +49,7 @@ const ProfileOverview = () => {
 
   return (
     <div
-      className="flex w-full h-full flex-col lg:flex-row lg:justify-between gap-8 sm:gap-0"
+      className="flex w-full h-full flex-col lg:flex-row lg:justify-between gap-16 sm:gap-0"
       id="projects"
     >
       <motion.section
@@ -176,7 +176,7 @@ const ProfileOverview = () => {
             );
           })}
         </motion.div>
-        <footer className="flex justify-between w-full pt-16">
+        <footer className="flex justify-between w-full my-16 lg:mb-0">
           <motion.section
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
@@ -330,6 +330,7 @@ const ProfileOverview = () => {
                   companyBio={project?.description}
                   positionHeld={project?.role}
                   link={project?.url}
+                  status={project?.status}
                 />
               ))}
             </section>

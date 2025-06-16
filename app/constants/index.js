@@ -65,13 +65,15 @@ export const PROJECTS = [
     description:
       "TrueKeepers is a non-profit organization that supports local NGOs in Nigeria with access to funding, resources and visibility to successfully implement and scale their projects in the communities they operate.",
     url: "https://truekeepers.org/",
+    status: "LIVE",
   },
 
   {
-    role: "Web Development",
+    role: "Web Application",
     company: "Mantled",
     description: `A product that offers seamless protection, effortless access to all your valuable assets and elevates the security of your valuables.`,
     url: "https://www.bemantled.com/",
+    status: "LIVE",
   },
 
   {
@@ -79,6 +81,7 @@ export const PROJECTS = [
     company: "Splicr",
     description: `Unlock the power of AI with our cutting-edge app designed to revolutionize your media workflow. Seamlessly upload media files directly from URLs, streamlining your process with advanced AI-driven capabilities that enhance efficiency and ease of use.`,
     url: "https://play.google.com/store/apps/details?id=com.splicr.app.staging",
+    status: "Google Play",
   },
 
   {
@@ -86,12 +89,14 @@ export const PROJECTS = [
     company: "Wagerz",
     description:
       "It is a mobile app that provides bettors expert reviews on legal USA online gambling sites with in-depth coverage of sports betting.",
+    status: "App Store",
   },
 
   {
     role: "Mobile Application",
     company: "QCSL Soccer Mobile app",
     description: `Mobile application for the QCSL Soccer organization. The QCSL represents the standard of excellence in the organization of soccer leagues, with experience since 1994.`,
+    status: "LIVE",
   },
 ];
 
