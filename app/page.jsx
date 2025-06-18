@@ -59,9 +59,9 @@ export default function Home() {
 
   return (
     <div
-      className={`relative w-full bg-white ${
+      className={`relative w-full ${
         loading ? "min-h-[100dvh] overflow-hidden" : ""
-      }`}
+      } dark:bg-background-dark bg-background`}
     >
       <AnimatePresence mode="wait">
         {loading && (

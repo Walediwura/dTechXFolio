@@ -17,6 +17,19 @@ html {
   --alt-gray: #bcbcbc;
 }
 
+@layer base {
+  html {
+    background-color: var(--background);
+    color: var(--darko);
+    /* transition: background-color 0.3s ease; */
+  }
+
+  html.dark {
+    background-color: var(--background-dark);
+    color: var(--whitey);
+  }
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-darko: var(--darko);

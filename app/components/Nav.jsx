@@ -13,7 +13,9 @@ const Nav = () => {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    setMounted(true);
+    setTimeout(() => {
+      setMounted(true);
+    }, 100);
   }, []);
 
   if (!mounted) return null;
@@ -23,7 +25,7 @@ const Nav = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.4 }}
-      className="w-full px-8 xl:px-16 fixed z-50 transition-all duration-300 ease-in-out dark:bg-transparent bg-white/10 backdrop-blur-md border-b border-white/10 dark:border-0 flex justify-between items-center pt-10"
+      className="w-full px-8 xl:px-16 fixed z-50 transition-all duration-300 ease-in-out dark:bg-transparent bg-white/10 backdrop-blur-md flex justify-between items-center pt-10"
     >
       <div>
         {" "}
